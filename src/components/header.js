@@ -25,7 +25,9 @@ const HeaderType = styled.div`
      
         @media only screen and (max-width: 768px) {
             width: ${props => (props.span ? (props.span / 12) * 100 : "8.33")}%;
-            font-size : 7.5vw;
+            height : 10vw;
+            font-size : 6vw;
+            top : -12.5%;
           }
     }
     .logored{
@@ -42,6 +44,7 @@ const HeaderType = styled.div`
         opacity: 1;
         left : 60%;
         top : 10%;
+        
     }
     .blackbutton{
         position: absolute;
@@ -56,23 +59,38 @@ const HeaderType = styled.div`
         top : 10%;
     }
     .hire{
+        position: absolute;
+		overflow: visible;
         text-align: center;
         font: normal normal normal 60px/72px Blanka; 
         font-size : 3.5vw;
-        top : 75%;
+        top : 5%;
+        left : 20%;
         letter-spacing: 0px;
         color: #FFFFFF;
         opacity: 1;
+        @media only screen and (max-width: 768px) {
+            position: absolute;
+		    overflow: visible;
+            font-size : 3.5vw;
+            top : -85%;
+        }
     }
     .tunning{
-        text-aign : center;
+        position: absolute;
+		overflow: visible;
         text-align: center;
         font: normal normal normal 60px/72px Blanka; 
         font-size : 3.5vw;
-        top : 75%;
-        letter-spacing: 0px;
+        top : 5%;
+        left : 12.5%;
         color: #000000;
-        opacity: 1;
+        @media only screen and (max-width: 768px) {
+            position: absolute;
+		    overflow: visible;
+            font-size : 3.5vw;
+            top : -85%;
+        }
     }
 `;
 
@@ -81,10 +99,10 @@ const Header = (type) => {
         <HeaderType>
             <span className = "logo">COUNTE<span className = "logored">R</span>SIDE</span>
             <span className = "whitebutton">
-                <div className = "hire">Hire</div>
+                <span className = "hire">Hire</span>
             </span>
             <span className = "blackbutton">
-                <div className = "tunning">Tunning</div>
+                <span className = "tunning">Tunning</span>
             </span>
         </HeaderType>    
     )
