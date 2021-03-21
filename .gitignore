@@ -3,6 +3,7 @@
 # dependencies
 /node_modules
 /design
+/slay001.github.io
 /.pnp
 .pnp.js
 
